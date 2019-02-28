@@ -36,6 +36,7 @@ namespace WebAppInternet.Controllers
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Connexion(Autorisations newlog)
         {
+           
             Autorisations log = new Autorisations();
             string userName = Request.Form["f_userName"];
             string motPasse = Request.Form["f_motPasse"];
@@ -47,13 +48,12 @@ namespace WebAppInternet.Controllers
             IBVAuthorization service = canal.CreateChannel();
 
             var clients = db.Clients.Include(c => c.Autorisations);
-            
-            
 
             int authId = service.login(userName, motPasse);
             int clientId = clients.First(c => c.Autorisations.id == authId).id;
+            var autoris = clients.First(c => c.id == clientId).Autorisations.niveau;
 
-            if (clientId > -1)
+            if (clientId > -1 && autoris == 2)
             {
                 Session["username"] = userName;
                 Session["clientId"] = clientId;
@@ -62,9 +62,16 @@ namespace WebAppInternet.Controllers
             }
             else
             {
-                ViewData["Error"] = "Ressayez";
+                if (autoris == 1)
+                {
+                    ViewData["Error1"] = "Vous devez utiliser un compte client pour vous connecter.";
+
+                }
+
+                ViewData["Error2"] = "Veuillez réessayer";
                 return View("Connexion");
             }
+
         }
 
 
