@@ -65,6 +65,8 @@ namespace WebAppInternet.Controllers
                 db.Clients.Add(clients);
                 db.SaveChanges();
 
+                Session["clientId"] = clients.id;
+
                 return RedirectToAction("Index", "Home");
             }
 
