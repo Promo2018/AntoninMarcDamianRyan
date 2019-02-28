@@ -1,0 +1,42 @@
+﻿@model WebAppInternet.Models.Autorisations
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Autorisations</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.userName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motPasse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motPasse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.niveau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.niveau)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

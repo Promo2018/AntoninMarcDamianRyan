@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebAppInternet.Models.Dossiers>
+
+@{
+    ViewBag.Title = "Mes Réservations";
+}
+
+<h2>Mes réservations</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.etat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.raisonAnnulation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numeroCB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Clients.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Voyages.id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.etat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.raisonAnnulation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numeroCB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clients.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Voyages.id)
+        </td>
+        <td>
+            @Html.ActionLink("Annuler", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

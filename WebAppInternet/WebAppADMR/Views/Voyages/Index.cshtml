@@ -1,0 +1,76 @@
+﻿@model IEnumerable<WebAppInternet.Models.Voyages>
+
+@{
+    ViewBag.Title = "Voyages";
+}
+
+<h2>Voyages</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.TextBox("destination", "", new { placeholder = "Nom de destination" })
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            Pays
+        </th>
+        <th>
+            Region
+        </th>
+        <th>
+            Date d'aller
+        </th>
+        <th>
+            Date de retour
+        </th>
+        <th>
+            Tarif tout compris
+        </th>
+        <th>
+            Détails
+        </th>
+        <th>
+            Réservation
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destinations.pays)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destinations.region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateAller)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateRetour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tarifToutCompris)
+            </td>
+            <td>
+                @using (Html.BeginForm())
+                {
+                    ViewBag.voyageId = item.id;
+                    <input type="button" class="btn btn-info" value="Détails" onclick="location.href='@Url.Action("Details", "Voyages", new { id = item.id })'" />
+                }
+            </td>
+            <th>
+                @using (Html.BeginForm())
+                {
+                    <input type="button" class="btn btn-info" value="Réserver" onclick="location.href='@Url.Action("InfosParticipants", "Voyages", new { region = item.Destinations.region })'" />
+                }
+            </th>
+        </tr>
+    }
+
+</table>

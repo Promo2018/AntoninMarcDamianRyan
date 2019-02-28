@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BoVoyagesADMRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AgencesVoyages">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="telephone" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Assurances">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="prix" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'BoVoyagesADMR.dbo.AssurancesDossiers' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="AssurancesDossiers">
+    <Key>
+      <PropertyRef Name="dossiersId" />
+      <PropertyRef Name="assurancesId" />
+    </Key>
+    <Property Name="dossiersId" Type="int" Nullable="false" />
+    <Property Name="assurancesId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Autorisations">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="motPasse" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="niveau" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="personnesId" Type="int" Nullable="false" />
+    <Property Name="autorisationsId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Commerciaux">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="personnesId" Type="int" Nullable="false" />
+    <Property Name="autorisationsId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Destinations">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="continent" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="pays" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="region" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Dossiers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="etat" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="raisonAnnulation" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="numeroCB" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="clientsId" Type="int" Nullable="false" />
+    <Property Name="voyagesId" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'BoVoyagesADMR.dbo.DossiersParticipants' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="DossiersParticipants">
+    <Key>
+      <PropertyRef Name="dossiersId" />
+      <PropertyRef Name="personnesId" />
+    </Key>
+    <Property Name="dossiersId" Type="int" Nullable="false" />
+    <Property Name="personnesId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Personnes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="civilite" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="nom" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="prenom" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="adresse" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="telephone" Type="nvarchar" MaxLength="30" />
+    <Property Name="dateNaissance" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Voyages">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dateAller" Type="date" Nullable="false" />
+    <Property Name="dateRetour" Type="date" Nullable="false" />
+    <Property Name="placesDisponibles" Type="int" Nullable="false" />
+    <Property Name="tarifToutCompris" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="destinationsId" Type="int" Nullable="false" />
+    <Property Name="agencesVoyagesId" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'BoVoyagesADMR.dbo.viewStatus' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="viewStatus">
+    <Key>
+      <PropertyRef Name="dossierId" />
+      <PropertyRef Name="etat" />
+      <PropertyRef Name="raisonAnnulation" />
+      <PropertyRef Name="clientId" />
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="dossierId" Type="int" Nullable="false" />
+    <Property Name="etat" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="raisonAnnulation" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="clientId" Type="int" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Assurance__assur__5629CD9C">
+    <End Role="Assurances" Type="Self.Assurances" Multiplicity="1" />
+    <End Role="AssurancesDossiers" Type="Self.AssurancesDossiers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Assurances">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AssurancesDossiers">
+        <PropertyRef Name="assurancesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Assurance__dossi__5535A963">
+    <End Role="Dossiers" Type="Self.Dossiers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AssurancesDossiers" Type="Self.AssurancesDossiers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dossiers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AssurancesDossiers">
+        <PropertyRef Name="dossiersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clients__autoris__440B1D61">
+    <End Role="Autorisations" Type="Self.Autorisations" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autorisations">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="autorisationsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clients__personn__4316F928">
+    <End Role="Personnes" Type="Self.Personnes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personnes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="personnesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Commercia__autor__47DBAE45">
+    <End Role="Autorisations" Type="Self.Autorisations" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Commerciaux" Type="Self.Commerciaux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autorisations">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Commerciaux">
+        <PropertyRef Name="autorisationsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Commercia__perso__46E78A0C">
+    <End Role="Personnes" Type="Self.Personnes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Commerciaux" Type="Self.Commerciaux" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personnes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Commerciaux">
+        <PropertyRef Name="personnesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dossiers__client__4F7CD00D">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Dossiers" Type="Self.Dossiers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Dossiers">
+        <PropertyRef Name="clientsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dossiers__voyage__5070F446">
+    <End Role="Voyages" Type="Self.Voyages" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Dossiers" Type="Self.Dossiers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Voyages">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Dossiers">
+        <PropertyRef Name="voyagesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DossiersP__dossi__52593CB8">
+    <End Role="Dossiers" Type="Self.Dossiers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DossiersParticipants" Type="Self.DossiersParticipants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dossiers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DossiersParticipants">
+        <PropertyRef Name="dossiersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DossiersP__perso__534D60F1">
+    <End Role="Personnes" Type="Self.Personnes" Multiplicity="1" />
+    <End Role="DossiersParticipants" Type="Self.DossiersParticipants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personnes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DossiersParticipants">
+        <PropertyRef Name="personnesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Voyages__agences__3C69FB99">
+    <End Role="AgencesVoyages" Type="Self.AgencesVoyages" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Voyages" Type="Self.Voyages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AgencesVoyages">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Voyages">
+        <PropertyRef Name="agencesVoyagesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Voyages__destina__3B75D760">
+    <End Role="Destinations" Type="Self.Destinations" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Voyages" Type="Self.Voyages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destinations">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Voyages">
+        <PropertyRef Name="destinationsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="reserverVoyage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idvoyage" Type="int" Mode="In" />
+    <Parameter Name="places" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="BoVoyagesADMRModelStoreContainer">
+    <EntitySet Name="AgencesVoyages" EntityType="Self.AgencesVoyages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Assurances" EntityType="Self.Assurances" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Autorisations" EntityType="Self.Autorisations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Commerciaux" EntityType="Self.Commerciaux" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Destinations" EntityType="Self.Destinations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dossiers" EntityType="Self.Dossiers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personnes" EntityType="Self.Personnes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Voyages" EntityType="Self.Voyages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AssurancesDossiers" EntityType="Self.AssurancesDossiers" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AssurancesDossiers].[dossiersId] AS [dossiersId], 
+    [AssurancesDossiers].[assurancesId] AS [assurancesId]
+    FROM [dbo].[AssurancesDossiers] AS [AssurancesDossiers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DossiersParticipants" EntityType="Self.DossiersParticipants" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DossiersParticipants].[dossiersId] AS [dossiersId], 
+    [DossiersParticipants].[personnesId] AS [personnesId]
+    FROM [dbo].[DossiersParticipants] AS [DossiersParticipants]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="viewStatus" EntityType="Self.viewStatus" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [viewStatus].[dossierId] AS [dossierId], 
+    [viewStatus].[etat] AS [etat], 
+    [viewStatus].[raisonAnnulation] AS [raisonAnnulation], 
+    [viewStatus].[clientId] AS [clientId], 
+    [viewStatus].[email] AS [email]
+    FROM [dbo].[viewStatus] AS [viewStatus]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Assurance__assur__5629CD9C" Association="Self.FK__Assurance__assur__5629CD9C">
+      <End Role="Assurances" EntitySet="Assurances" />
+      <End Role="AssurancesDossiers" EntitySet="AssurancesDossiers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Assurance__dossi__5535A963" Association="Self.FK__Assurance__dossi__5535A963">
+      <End Role="Dossiers" EntitySet="Dossiers" />
+      <End Role="AssurancesDossiers" EntitySet="AssurancesDossiers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clients__autoris__440B1D61" Association="Self.FK__Clients__autoris__440B1D61">
+      <End Role="Autorisations" EntitySet="Autorisations" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clients__personn__4316F928" Association="Self.FK__Clients__personn__4316F928">
+      <End Role="Personnes" EntitySet="Personnes" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Commercia__autor__47DBAE45" Association="Self.FK__Commercia__autor__47DBAE45">
+      <End Role="Autorisations" EntitySet="Autorisations" />
+      <End Role="Commerciaux" EntitySet="Commerciaux" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Commercia__perso__46E78A0C" Association="Self.FK__Commercia__perso__46E78A0C">
+      <End Role="Personnes" EntitySet="Personnes" />
+      <End Role="Commerciaux" EntitySet="Commerciaux" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dossiers__client__4F7CD00D" Association="Self.FK__Dossiers__client__4F7CD00D">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Dossiers" EntitySet="Dossiers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dossiers__voyage__5070F446" Association="Self.FK__Dossiers__voyage__5070F446">
+      <End Role="Voyages" EntitySet="Voyages" />
+      <End Role="Dossiers" EntitySet="Dossiers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DossiersP__dossi__52593CB8" Association="Self.FK__DossiersP__dossi__52593CB8">
+      <End Role="Dossiers" EntitySet="Dossiers" />
+      <End Role="DossiersParticipants" EntitySet="DossiersParticipants" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DossiersP__perso__534D60F1" Association="Self.FK__DossiersP__perso__534D60F1">
+      <End Role="Personnes" EntitySet="Personnes" />
+      <End Role="DossiersParticipants" EntitySet="DossiersParticipants" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Voyages__agences__3C69FB99" Association="Self.FK__Voyages__agences__3C69FB99">
+      <End Role="AgencesVoyages" EntitySet="AgencesVoyages" />
+      <End Role="Voyages" EntitySet="Voyages" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Voyages__destina__3B75D760" Association="Self.FK__Voyages__destina__3B75D760">
+      <End Role="Destinations" EntitySet="Destinations" />
+      <End Role="Voyages" EntitySet="Voyages" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

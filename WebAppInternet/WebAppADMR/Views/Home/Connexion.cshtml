@@ -1,0 +1,30 @@
+﻿@model WebAppInternet.Models.Autorisations
+
+@{
+    ViewBag.Title = "Connexion";
+}
+
+<div>
+    @if (@Session["username"] == null)
+    {
+        <h1>Veuillez saisir vos identifiants.</h1>
+        <br />
+        <br />
+        using (Html.BeginForm())
+        {
+            <p>
+                Identifiant : @Html.TextBox("f_userName")
+                Mot de passe : @Html.TextBox("f_motPasse")
+                <input type="submit" value="Connexion" />
+            </p>
+
+        }
+        <br />
+        @ViewData["Error"]
+        
+    }
+    else
+    {
+        <p>Vous êtes connecté en tant que @Session["username"].</p>
+    }
+</div>

@@ -1,0 +1,10 @@
+﻿
+@model DateTime?
+@if (Model.HasValue && Model.GetType().ToString() == "Clients")
+{
+    @Model.Value.ToString("dd/MM/yyyy")
+}
+else
+{
+    @Model.Value.ToString("dd/MM/yyyy H:mm")
+}

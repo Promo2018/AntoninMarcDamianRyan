@@ -1,0 +1,86 @@
+﻿@model IEnumerable<WebAppInternet.Models.Clients>
+
+@{
+    ViewBag.Title = "Mon Compte";
+}
+
+<h2>Mon Compte</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Email
+        </th>
+        <th>
+            Nom de compte
+        </th>
+        <th>
+            Mot de passe
+        </th>
+        <th>
+            Civilite
+        </th>
+        <th>
+            Nom
+        </th>
+        <th>
+            Prenom
+        </th>
+        <th>
+            Adresse
+        </th>
+        <th>
+            Telephone
+        </th>
+        <th>
+            Date de naissance
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autorisations.userName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autorisations.motPasse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personnes.civilite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personnes.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personnes.prenom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personnes.adresse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personnes.telephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personnes.dateNaissance)
+        </td>
+        <td>
+            @Html.ActionLink("Modifier", "Edit", new { id = item.id })
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <br /><br /><br /><br />
+            Supprimer mon compte :
+            @Html.ActionLink("Supprimer", "Delete", new { id = item.id })
+        </td>
+        
+    </tr>
+}
+
+</table>

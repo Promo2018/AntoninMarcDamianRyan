@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppInternet", "WebAppADMR\WebAppInternet.csproj", "{D913ECED-B3E4-4B6F-83CE-9762C599D6B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoVoyage_Contract", "BoVoyage_Contract\BoVoyage_Contract.csproj", "{6C51DDB8-468F-4066-BE8B-83CC8757A872}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D913ECED-B3E4-4B6F-83CE-9762C599D6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D913ECED-B3E4-4B6F-83CE-9762C599D6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D913ECED-B3E4-4B6F-83CE-9762C599D6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D913ECED-B3E4-4B6F-83CE-9762C599D6B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C51DDB8-468F-4066-BE8B-83CC8757A872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C51DDB8-468F-4066-BE8B-83CC8757A872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C51DDB8-468F-4066-BE8B-83CC8757A872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C51DDB8-468F-4066-BE8B-83CC8757A872}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4D82C49-C6E2-4B1F-808F-00F207DB6771}
+	EndGlobalSection
+EndGlobal

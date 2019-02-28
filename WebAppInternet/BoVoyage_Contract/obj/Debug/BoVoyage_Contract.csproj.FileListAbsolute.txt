@@ -1,0 +1,34 @@
+C:\Users\Adminl\source\repos\BVAuthorization\BoVoyage_Contrat\bin\Debug\BoVoyage_Contract.dll
+C:\Users\Adminl\source\repos\BVAuthorization\BoVoyage_Contrat\bin\Debug\BoVoyage_Contract.pdb
+C:\Users\Adminl\source\repos\BVAuthorization\BoVoyage_Contrat\obj\Debug\BoVoyage_Contract.csproj.CoreCompileInputs.cache
+C:\Users\Adminl\source\repos\BVAuthorization\BoVoyage_Contrat\obj\Debug\BoVoyage_Contract.dll
+C:\Users\Adminl\source\repos\BVAuthorization\BoVoyage_Contrat\obj\Debug\BoVoyage_Contract.pdb
+C:\Users\Adminl\source\repos\BVAuthorization\BoVoyage_Contrat\obj\Debug\BoVoyage_Contract.csprojAssemblyReference.cache
+C:\Users\Adminl\source\repos\BVAuthorization\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.dll
+C:\Users\Adminl\source\repos\BVAuthorization\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.pdb
+C:\Users\Adminl\source\repos\BVAuthorization\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csproj.CoreCompileInputs.cache
+C:\Users\Adminl\source\repos\BVAuthorization\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.dll
+C:\Users\Adminl\source\repos\BVAuthorization\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.pdb
+C:\Users\Adminl\source\repos\BoVoyageWCF\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.dll
+C:\Users\Adminl\source\repos\BoVoyageWCF\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.pdb
+C:\Users\Adminl\source\repos\BoVoyageWCF\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csproj.CoreCompileInputs.cache
+C:\Users\Adminl\source\repos\BoVoyageWCF\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.dll
+C:\Users\Adminl\source\repos\BoVoyageWCF\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.pdb
+C:\Users\Adminl\Desktop\internet 2019_02_19 v1\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.dll
+C:\Users\Adminl\Desktop\internet 2019_02_19 v1\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.pdb
+C:\Users\Adminl\Desktop\internet 2019_02_19 v1\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csprojAssemblyReference.cache
+C:\Users\Adminl\Desktop\internet 2019_02_19 v1\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csproj.CoreCompileInputs.cache
+C:\Users\Adminl\Desktop\internet 2019_02_19 v1\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.dll
+C:\Users\Adminl\Desktop\internet 2019_02_19 v1\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.pdb
+\\webnet21\Formation\_Nous_Groupe\Travaux communs\Projet3_Damian_Antonin_Marc_Ryan\Solution\BoVoyageADMR_v6\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.dll
+\\webnet21\Formation\_Nous_Groupe\Travaux communs\Projet3_Damian_Antonin_Marc_Ryan\Solution\BoVoyageADMR_v6\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.pdb
+\\webnet21\Formation\_Nous_Groupe\Travaux communs\Projet3_Damian_Antonin_Marc_Ryan\Solution\BoVoyageADMR_v6\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csprojAssemblyReference.cache
+\\webnet21\Formation\_Nous_Groupe\Travaux communs\Projet3_Damian_Antonin_Marc_Ryan\Solution\BoVoyageADMR_v6\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csproj.CoreCompileInputs.cache
+\\webnet21\Formation\_Nous_Groupe\Travaux communs\Projet3_Damian_Antonin_Marc_Ryan\Solution\BoVoyageADMR_v6\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.dll
+\\webnet21\Formation\_Nous_Groupe\Travaux communs\Projet3_Damian_Antonin_Marc_Ryan\Solution\BoVoyageADMR_v6\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.pdb
+C:\Users\Adminl\Desktop\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.dll
+C:\Users\Adminl\Desktop\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.pdb
+C:\Users\Adminl\Desktop\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csprojAssemblyReference.cache
+C:\Users\Adminl\Desktop\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csproj.CoreCompileInputs.cache
+C:\Users\Adminl\Desktop\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.dll
+C:\Users\Adminl\Desktop\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.pdb

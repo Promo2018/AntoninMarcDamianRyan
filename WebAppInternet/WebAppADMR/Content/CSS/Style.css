@@ -1,0 +1,125 @@
+﻿html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 14px;
+    background-color: #f7f9f9;
+    padding: 0px 6%;
+}
+
+
+header {
+    float: left;
+    width: 100%;
+    border-bottom: 1px dotted #5D5A53;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 20px;
+    float: left;
+    padding: 45px 6px 5px 0px;
+}
+
+ul li {
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+footer {
+    width: 60%;
+    border-top: 1px dotted #5D5A53;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.bigImage {
+    max-width: 100%;
+    height: auto;
+}
+
+#liste {
+    
+}
+
+    #liste li {
+        display: inline;
+    }
+
+    ul#liste li a {
+        border-left: 1px dotted #8A8575;
+        padding: 10px;
+        margin-top: 10px;
+        text-decoration: none;
+        text-align: center;
+        float: left;
+    }
+
+
+    #liste li a:hover {
+        background-color: white;
+    }
+
+#connectionMenu {
+
+}
+
+    #connectionMenu li {
+        display: block;
+    }
+
+    ul#connectionMenu li a {
+        border-left: 1px dotted #8A8575;
+        padding: 10px;
+        margin-top: 10px;
+        text-decoration: none;
+        text-align: center;
+        float: left;
+    }
+
+
+
+.gauche {
+    float: left;
+}
+
+.droite {
+    float: right;
+}
+
+p {
+    margin-bottom: 15px;
+    margin-top: 8px;
+}
+
+header h1 a {
+    
+}
+
+h2 {
+    
+}
+
+a:link, a:visited {
+    
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: none;
+}
+
+a:active {
+    text-decoration: none;
+    font-weight: none;
+}
+
