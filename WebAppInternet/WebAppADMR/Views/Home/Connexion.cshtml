@@ -14,14 +14,16 @@
         {
             <p>
                 Identifiant : @Html.TextBox("f_userName")
-                Mot de passe : @Html.TextBox("f_motPasse")
+
+                Mot de passe : @Html.Password("f_motPasse")
                 <input type="submit" value="Connexion" />
             </p>
 
         }
         <br />
-        @ViewData["Error"]
-        
+        @ViewData["Error1"]
+        @ViewData["Error2"]
+
     }
     else
     {
