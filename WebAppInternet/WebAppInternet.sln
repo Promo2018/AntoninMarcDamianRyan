@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppInternet", "WebAppADMR\WebAppInternet.csproj", "{D913ECED-B3E4-4B6F-83CE-9762C599D6B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppInternet", "WebAppInternet\WebAppInternet.csproj", "{D913ECED-B3E4-4B6F-83CE-9762C599D6B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoVoyage_Contract", "BoVoyage_Contract\BoVoyage_Contract.csproj", "{6C51DDB8-468F-4066-BE8B-83CC8757A872}"
 EndProject
