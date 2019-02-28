@@ -100,12 +100,12 @@ else
         <div class="col-md-offset-2 col-md-10">
             @if (@Session["participantId"] == null)
             {
-                <input type="submit" class="btn btn-info" value="Ajouter un participant" onclick="location.href='@Url.Action("InfosParticipants", "Voyages", 1)'" />
+                <input type="submit" class="btn btn-info" value="Ajouter un participant" onclick="location.href='@Url.Action("InfosParticipants", "Reservation", 1)'" />
 
             }
             else
             {
-                <input type="submit" class="btn btn-info" value="Ajouter un autre participant" onclick="location.href='@Url.Action("InfosParticipants", "Voyages", 1)'" />
+                <input type="submit" class="btn btn-info" value="Ajouter un autre participant" onclick="location.href='@Url.Action("InfosParticipants", "Reservation", 1)'" />
             }
 
         </div>
