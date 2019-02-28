@@ -32,3 +32,9 @@ C:\Users\Adminl\Desktop\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\obj\D
 C:\Users\Adminl\Desktop\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csproj.CoreCompileInputs.cache
 C:\Users\Adminl\Desktop\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.dll
 C:\Users\Adminl\Desktop\WebAppInternet(Anto 17h00 20_02)\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.pdb
+S:\GIT\WebAppInternet\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.dll
+S:\GIT\WebAppInternet\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.pdb
+S:\GIT\WebAppInternet\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csprojAssemblyReference.cache
+S:\GIT\WebAppInternet\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csproj.CoreCompileInputs.cache
+S:\GIT\WebAppInternet\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.dll
+S:\GIT\WebAppInternet\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.pdb
