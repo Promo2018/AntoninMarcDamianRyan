@@ -48,15 +48,14 @@ namespace WebAppInternet.Controllers
 
             var clients = db.Clients.Include(c => c.Autorisations);
             
+            
 
-            int clientId = service.login(userName, motPasse);
+            int authId = service.login(userName, motPasse);
+            int clientId = clients.First(c => c.Autorisations.id == authId).id;
 
-            if (clientId != -1)
+            if (clientId > -1)
             {
-                
-   
                 Session["username"] = userName;
-
                 Session["clientId"] = clientId;
 
                 return View("Index");
