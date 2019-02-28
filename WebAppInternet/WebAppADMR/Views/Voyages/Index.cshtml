@@ -67,7 +67,7 @@
             <th>
                 @using (Html.BeginForm())
                 {
-                    <input type="button" class="btn btn-info" value="Réserver" onclick="location.href='@Url.Action("InfosParticipants", "Voyages", new { region = item.Destinations.region })'" />
+                    <input type="button" class="btn btn-info" value="Réserver" onclick="location.href='@Url.Action("InfosParticipants", "Reservation", new { region = item.Destinations.region })'" />
                 }
             </th>
         </tr>

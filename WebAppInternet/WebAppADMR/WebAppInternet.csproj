@@ -126,6 +126,7 @@
     <Compile Include="Controllers\DossiersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonnesController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\VoyagesController.cs" />
     <Compile Include="Models\AgencesVoyages.cs">
       <DependentUpon>BDD.tt</DependentUpon>
@@ -222,10 +223,10 @@
     <Content Include="Views\Autorisations\_ViewStart.cshtml" />
     <Content Include="Views\Voyages\Details.cshtml" />
     <Content Include="Views\Voyages\Index.cshtml" />
-    <Content Include="Views\Voyages\Paiement.cshtml" />
+    <Content Include="Views\Reservation\Paiement.cshtml" />
     <Content Include="Views\Voyages\_ViewStart.cshtml" />
-    <Content Include="Views\Voyages\Confirmation.cshtml" />
-    <Content Include="Views\Voyages\InfosParticipants.cshtml" />
+    <Content Include="Views\Reservation\Confirmation.cshtml" />
+    <Content Include="Views\Reservation\InfosParticipants.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

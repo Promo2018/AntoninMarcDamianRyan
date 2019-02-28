@@ -38,3 +38,9 @@ S:\GIT\WebAppInternet\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\obj
 S:\GIT\WebAppInternet\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csproj.CoreCompileInputs.cache
 S:\GIT\WebAppInternet\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.dll
 S:\GIT\WebAppInternet\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.pdb
+S:\BoVoyage\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.dll
+S:\BoVoyage\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\bin\Debug\BoVoyage_Contract.pdb
+S:\BoVoyage\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csprojAssemblyReference.cache
+S:\BoVoyage\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.csproj.CoreCompileInputs.cache
+S:\BoVoyage\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.dll
+S:\BoVoyage\AntoninMarcDamianRyan\WebAppInternet\BoVoyage_Contract\obj\Debug\BoVoyage_Contract.pdb
